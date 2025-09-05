@@ -298,6 +298,85 @@
             font-size: 1.3em;
         }
 
+        /* 새로 추가된 합작조건 섹션 스타일 */
+        .joint-venture-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            grid-column: 1 / -1;
+        }
+
+        .joint-venture-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .cooperation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .cooperation-card {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .cooperation-card h3 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .cooperation-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cooperation-card li {
+            background: #e8f2ff;
+            margin: 8px 0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+            font-size: 14px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .advantage-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
         @media (max-width: 768px) {
             .main-content {
                 grid-template-columns: 1fr;
@@ -312,6 +391,14 @@
             }
             
             .partners {
+                grid-template-columns: 1fr;
+            }
+
+            .cooperation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .advantages-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -341,7 +428,7 @@
                     
                     <div class="partner-card">
                         <h3>BEK (Bayt El Khebra Group)</h3>
-                        <p><strong>회장: 마흐렙 전 총리</strong></p>
+                        <p><strong>회장: 마흐루끄 전 이리</strong></p>
                         <p>• 금융, 비즈니스 개발 프로젝트</p>
                         <p>• 컨설팅, 여행업</p>
                         <p>• 다각화된 투자 지주회사</p>
@@ -372,6 +459,77 @@
             </div>
         </div>
 
+        <!-- 새로 추가된 합작조건 섹션 -->
+        <div class="joint-venture-section">
+            <h2>🤝 한-이집트 합작투자 조건</h2>
+            
+            <div class="highlight-box">
+                <h3>기술이전과 50:50 투자 파트너십</h3>
+                <p>상호 신뢰를 바탕으로 한 공정한 투자 분담과 기술 협력</p>
+            </div>
+
+            <div class="cooperation-grid">
+                <div class="cooperation-card">
+                    <h3>🇪🇬 이집트측 역할</h3>
+                    <ul>
+                        <li>토지 및 공장건물 제공</li>
+                        <li>전기, 물, 오폐수처리 인프라</li>
+                        <li>신뢰 가능한 근로자 고용</li>
+                        <li>이집트 내 판매 보장</li>
+                        <li>현지 정부 관계 및 인허가</li>
+                    </ul>
+                </div>
+                
+                <div class="cooperation-card">
+                    <h3>🇰🇷 한국측 역할</h3>
+                    <ul>
+                        <li>기술이전 및 노하우 제공</li>
+                        <li>생산설비 제공</li>
+                        <li>글로벌 품질 관리 교육</li>
+                        <li>외국 판매시 홍보 및 마케팅</li>
+                        <li>국제 인증 및 품질 표준</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-section" style="margin-top: 30px; box-shadow: none; padding: 0;">
+                <h2>🎯 AOI와 합작시 특별 이점</h2>
+                
+                <div class="highlight-box">
+                    <h3>글로벌 경쟁우위 확보</h3>
+                    <div class="advantages-grid">
+                        <div class="advantage-item">
+                            <h4>이집트 내 판매 보장</h4>
+                            <p>이집트 정부 보장 시장</p>
+                        </div>
+                        <div class="advantage-item">
+                            <h4>양질의 노동력</h4>
+                            <p>노조 없는 안정적 인력</p>
+                        </div>
+                        <div class="advantage-item">
+                            <h4>저렴한 인건비</h4>
+                            <p>아시아 대비 경쟁력</p>
+                        </div>
+                        <div class="advantage-item">
+                            <h4>무관세 수출</h4>
+                            <p>중동·아프리카·유럽 진출</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 4px solid #ffc107; margin-top: 20px;">
+                    <h4 style="color: #856404; margin-bottom: 15px;">🌍 글로벌 트렌드 분석</h4>
+                    <p style="color: #856404; margin: 0; line-height: 1.8;">
+                        <strong>중국 → 베트남 → 이집트 이동 중</strong><br>
+                        • 중국 인건비 상승으로 베트남 진출 증가<br>
+                        • 트럼프 관세 정책으로 베트남에서 이집트로 재이동<br>
+                        • 이집트는 중국 대비 가격경쟁력과 유럽 접근성 우수<br>
+                        • 무관세 혜택으로 유럽, 중동, 아프리카 동시 공략 가능
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <div class="schedule-section">
             <h2>📅 이집트 기업방문 프로그램 일정 (예시) </h2>
             <div class="schedule-item">
@@ -394,7 +552,7 @@
         <div class="info-section">
             <h2>📄 Business Proposal Guide (영문 제안서 가이드)</h2>
             <div style="background: #fff3cd; padding: 15px; border-radius: 8px; border-left: 4px solid #ffc107; margin-bottom: 20px;">
-                <h4 style="color: #856404; margin-bottom: 10px;">📏 Format Requirements</h4>
+                <h4 style="color: #856404; margin-bottom: 10px;">📝 Format Requirements</h4>
                 <p style="color: #856404; margin: 0;">
                     <strong>A4 1장 분량으로 최대한 간략하게 작성</strong><br>
                     영어로 작성 / 핵심 내용만 포함 / 간결한 문장 사용
@@ -410,24 +568,6 @@
                         • Company Name / CEO Name<br>
                         • Main Business (2-3 key areas)<br>
                         • Website & Phone
-                    </p>
-                </div>
-                
-                <div style="background: white; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #764ba2;">
-                    <h4 style="color: #333; margin-bottom: 8px; font-size: 16px;">2. Products/Services (제품/서비스)</h4>
-                    <p style="margin: 0; color: #666; font-size: 14px;">
-                        • 3-5 key products/systems<br>
-                        • Brief technical features<br>
-                        • Target applications
-                    </p>
-                </div>
-                
-                <div style="background: white; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #667eea;">
-                    <h4 style="color: #333; margin-bottom: 8px; font-size: 16px;">3. Egypt Benefits (이집트 혜택)</h4>
-                    <p style="margin: 0; color: #666; font-size: 14px;">
-                        • Technology transfer potential<br>
-                        • Job creation & local production<br>
-                        • Infrastructure development
                     </p>
                 </div>
                 
@@ -547,7 +687,7 @@
 
         <div class="contact-info">
             <h3>📞 직접 문의</h3>
-            <p><strong>KEDA 사무총장</strong></p>
+            <p><strong>KEDA 사무이장</strong></p>
             <p>📱 휴대폰: 010-2340-7019</p>
             <p>📧 이메일: ohhmoon@naver.com</p>
             <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.9;">
@@ -635,7 +775,7 @@ ${message}
 🌐 신청경로: KEDA 한-이집트 투자협력 플랫폼 (https://keda-investment.com)
 
 ---
-📞 긴급 연락: 010-2340-7019 (KEDA 사무총장)
+📞 긴급 연락: 010-2340-7019 (KEDA 사무이장)
 📧 이메일: ohhmoon@naver.com
 🏢 KEDA (Korean Egyptian Development Association)
 
@@ -888,4 +1028,22 @@ ${message}
     </script>
 </body>
 
-</html>
+</html>16px;">2. Products/Services (제품/서비스)</h4>
+                    <p style="margin: 0; color: #666; font-size: 14px;">
+                        • 3-5 key products/systems<br>
+                        • Brief technical features<br>
+                        • Target applications
+                    </p>
+                </div>
+                
+                <div style="background: white; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #667eea;">
+                    <h4 style="color: #333; margin-bottom: 8px; font-size: 16px;">3. Egypt Benefits (이집트 혜택)</h4>
+                    <p style="margin: 0; color: #666; font-size: 14px;">
+                        • Technology transfer potential<br>
+                        • Job creation & local production<br>
+                        • Infrastructure development
+                    </p>
+                </div>
+                
+                <div style="background: white; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #764ba2;">
+                    <h4 style="color: #333; margin-bottom: 8px; font-size:
