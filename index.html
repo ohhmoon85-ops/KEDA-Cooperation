@@ -425,6 +425,33 @@
                 font-size: 0.95em;
                 line-height: 1.4;
             }
+            /* 글로벌 판매 전략 모바일 최적화 */
+            .highlight-box div[style*="grid-template-columns: 1fr 1fr"] {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 12px !important;
+            }
+                
+            .highlight-box div[style*="background: rgba(255,255,255,0.1)"] h4 {
+                font-size: 1em !important;
+                margin-bottom: 8px !important;
+            }
+
+            .highlight-box div[style*="background: rgba(255,255,255,0.1)"] p {
+                font-size: 13px !important;
+                line-height: 1.5 !important;
+            }
+
+            /* 삼성전자 성공사례 모바일 최적화 */
+            .highlight-box div[style*="background: rgba(255,255,255,0.95)"] h4 {
+                font-size: 1em !important;
+                margin-bottom: 8px !important;
+            }
+
+            .highlight-box div[style*="background: rgba(255,255,255,0.95)"] p {
+                font-size: 13px !important;
+                line-height: 1.5 !important;
+            }
         }
     </style>
 </head>
@@ -1033,6 +1060,7 @@ ${message}
         document.addEventListener('DOMContentLoaded', function() {
             
             // 폼 유효성
+
 
 
 
