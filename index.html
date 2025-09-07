@@ -377,6 +377,7 @@
             backdrop-filter: blur(10px);
         }
 
+        /* 모바일 전용 개선된 스타일 */
         @media (max-width: 768px) {
             .main-content {
                 grid-template-columns: 1fr;
@@ -425,32 +426,93 @@
                 font-size: 0.95em;
                 line-height: 1.4;
             }
-            /* 글로벌 판매 전략 모바일 최적화 */
-            .highlight-box div[style*="grid-template-columns: 1fr 1fr"] {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 12px !important;
-            }
-                
-            .highlight-box div[style*="background: rgba(255,255,255,0.1)"] h4 {
-                font-size: 1em !important;
-                margin-bottom: 8px !important;
+
+            /* 글로벌 판매 전략 모바일 최적화 - 기존 스타일 개선 */
+            .global-sales-strategy {
+                background: linear-gradient(135deg, #2d5a2d 0%, #4a7c4a 100%);
+                color: white;
+                padding: 20px;
+                border-radius: 15px;
+                margin-top: 25px;
             }
 
-            .highlight-box div[style*="background: rgba(255,255,255,0.1)"] p {
-                font-size: 13px !important;
-                line-height: 1.5 !important;
+            .global-sales-strategy h3 {
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                font-size: 1.1em;
+            }
+
+            .global-sales-strategy .sales-intro {
+                background: rgba(255,255,255,0.1);
+                padding: 15px;
+                border-radius: 10px;
+                backdrop-filter: blur(10px);
+                margin-bottom: 15px;
+            }
+
+            .global-sales-strategy .sales-intro p {
+                margin: 0 0 12px 0;
+                font-weight: 500;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            /* 모바일에서 판매 전략 카드들 */
+            .sales-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 12px;
+            }
+
+            .sales-card {
+                background: rgba(255,255,255,0.1);
+                padding: 12px;
+                border-radius: 8px;
+            }
+
+            .sales-card h4 {
+                margin: 0 0 8px 0;
+                color: #a8d8a8;
+                font-size: 0.95em;
+                line-height: 1.3;
+            }
+
+            .sales-card p {
+                margin: 0;
+                font-size: 13px;
+                line-height: 1.4;
             }
 
             /* 삼성전자 성공사례 모바일 최적화 */
-            .highlight-box div[style*="background: rgba(255,255,255,0.95)"] h4 {
-                font-size: 1em !important;
-                margin-bottom: 8px !important;
+            .samsung-case {
+                background: rgba(255,255,255,0.95);
+                color: #2d5a2d;
+                padding: 15px;
+                border-radius: 10px;
+                margin-top: 15px;
             }
 
-            .highlight-box div[style*="background: rgba(255,255,255,0.95)"] p {
-                font-size: 13px !important;
-                line-height: 1.5 !important;
+            .samsung-case h4 {
+                margin: 0 0 8px 0;
+                display: flex;
+                align-items: center;
+                font-size: 0.95em;
+                line-height: 1.3;
+            }
+
+            .samsung-case p {
+                margin: 0;
+                line-height: 1.5;
+                font-size: 13px;
+            }
+
+            .samsung-case .case-details {
+                color: #666;
+                font-size: 12px;
+                margin-top: 8px;
+                line-height: 1.4;
             }
         }
     </style>
@@ -471,7 +533,7 @@
                     <div class="partner-card">
                         <h3>AOI (Arab Organization for Industrialization)</h3>
                         <p><strong>국영기업</strong></p>
-                        <p><strong>AOI 회장 : Gen.목타르 (이사회 : 대통령이 의장, 총리 및 국정원장, 국방/외교/산업부장관 등 대부분 국무위원 포함)</strong></p>
+                        <p><strong>AOI 회장 : Gen.목타르 (이사회 : 대통령이 의장, 이리 및 국정원장, 국방/외교/산업부장관 등 대부분 국무위원 포함)</strong></p>
                         <p>• 방산, 항공기 엔진 제작/정비</p>
                         <p>• 전력·통신 인프라</p>
                         <p>• 민수제조 (전자제품, 의료기기)</p>
@@ -479,7 +541,7 @@
                     
                     <div class="partner-card">
                         <h3>BEK (Bayt El Khebra Group)</h3>
-                        <p><strong>회장: Eng.이브라힘 마흐렙 전 총리</strong></p>
+                        <p><strong>회장: Eng.이브라힘 마흐뢰 전 이리</strong></p>
                         <p>• 금융, 비즈니스 개발 프로젝트</p>
                         <p>• 컨설팅, 여행업</p>
                         <p>• 다각화된 투자 지주회사</p>
@@ -573,102 +635,103 @@
                     <h2 style="color: #667eea; margin-bottom: 20px; font-size: 1.5em; border-bottom: 3px solid #667eea; padding-bottom: 10px;">🏭 단계적 공동생산 방식</h2>
                     
                     <div style="background: #f0f8ff; padding: 20px; border-radius: 10px; margin-bottom: 25px; border-left: 4px solid #667eea;">
-                        <p style="margin: 0; color: #333; font-weight: 500; line-height: 1.6;">
-                            이집트의 산업계 부품생산능력을 고려하여 <strong>단계적으로 현지화를 진행</strong>하는 체계적 접근
-                        </p>
-                    </div>
-
-                    <div style="display: grid; gap: 15px;">
-                        <div style="background: #fff; border: 2px solid #e8f2ff; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #4285f4 0%, #667eea 100%);"></div>
-                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
-                                <span style="background: #4285f4; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px;">1</span>
-                                <h4 style="color: #4285f4; margin: 0; font-size: 1.1em;">현지여건 파악 및 조립생산 교육</h4>
-                            </div>
-                            <p style="margin: 0; color: #555; margin-left: 47px; line-height: 1.5;">이집트 현지여건 파악 및 조립생산을 위한 기술교육 실시</p>
-                        </div>
-
-                        <div style="background: #fff; border: 2px solid #e8f2ff; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #667eea 0%, #4285f4 100%);"></div>
-                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
-                                <span style="background: #667eea; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px;">2</span>
-                                <h4 style="color: #667eea; margin: 0; font-size: 1.1em;">한국 부품 조립생산 (Made in Egypt)</h4>
-                            </div>
-                            <p style="margin: 0; color: #555; margin-left: 47px; line-height: 1.5;">한국에서 공급된 부품의 조립생산 (이집트 현지에서 포장만 해도 Made in Egypt)</p>
-                        </div>
-
-                        <div style="background: #fff; border: 2px solid #e8f2ff; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);"></div>
-                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
-                                <span style="background: #8b5cf6; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px;">3</span>
-                                <h4 style="color: #8b5cf6; margin: 0; font-size: 1.1em;">SKD 부품생산조립</h4>
-                            </div>
-                            <p style="margin: 0; color: #555; margin-left: 47px; line-height: 1.5;">Semi Knocked Down - 반조립 부품의 현지 생산 및 조립</p>
-                        </div>
-
-                        <div style="background: #fff; border: 2px solid #e8f2ff; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #764ba2 0%, #9333ea 100%);"></div>
-                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
-                                <span style="background: #764ba2; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px;">4</span>
-                                <h4 style="color: #764ba2; margin: 0; font-size: 1.1em;">CKD 부품생산조립</h4>
-                            </div>
-                            <p style="margin: 0; color: #555; margin-left: 47px; line-height: 1.5;">Complete Knocked Down - 완전분해 부품의 현지 생산 및 조립</p>
-                        </div>
-
-                        <div style="background: #fff; border: 2px solid #e8f2ff; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #16a34a 0%, #15803d 100%);"></div>
-                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
-                                <span style="background: #16a34a; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px;">5</span>
-                                <h4 style="color: #16a34a; margin: 0; font-size: 1.1em;">완전 현지화 생산</h4>
-                            </div>
-                            <p style="margin: 0; color: #555; margin-left: 47px; line-height: 1.5;">100% 이집트 현지에서 부품생산부터 최종조립까지 완전 현지화</p>
-                        </div>
-                    </div>
-
-                    <!-- 판매 전략 섹션 -->
-                    <div style="background: linear-gradient(135deg, #2d5a2d 0%, #4a7c4a 100%); color: white; padding: 25px; border-radius: 15px; margin-top: 25px;">
-                        <h3 style="margin-bottom: 15px; display: flex; align-items: center;">
-                            <span style="font-size: 1.5em; margin-right: 10px;">🌍</span>
-                            글로벌 판매 전략
-                        </h3>
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; backdrop-filter: blur(10px);">
-                            <p style="margin: 0 0 15px 0; font-weight: 500; font-size: 1.1em;">최초 조립/생산된 제품의 판매 전략</p>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
-                                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                                    <h4 style="margin: 0 0 10px 0; color: #a8d8a8;">🎯 우선 수출</h4>
-                                    <p style="margin: 0; font-size: 14px; line-height: 1.5;">아프리카, 중동, 유럽 105개국과의 무관세 협정을 활용하여 주변국가 우선 공급</p>
-                                </div>
-                                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                                    <h4 style="margin: 0 0 10px 0; color: #a8d8a8;">🏠 내수 공급</h4>
-                                    <p style="margin: 0; font-size: 14px; line-height: 1.5;">이집트 내수시장 안정적 공급으로 기반 구축</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div style="background: rgba(255,255,255,0.95); color: #2d5a2d; padding: 20px; border-radius: 10px; margin-top: 20px;">
-                            <h4 style="margin: 0 0 10px 0; display: flex; align-items: center;">
-                                <span style="margin-right: 8px;">📺</span>
-                                삼성전자 성공사례
-                            </h4>
-                            <p style="margin: 0; line-height: 1.6; font-size: 15px;">
-                                <strong>TV 생산품의 15%는 이집트시장 판매, 85%는 주변국가 수출</strong><br>
-                                <span style="color: #666; font-size: 14px;">• 무관세 혜택을 활용한 글로벌 수출 허브 구축<br>
-                                • 안정적 내수시장을 기반으로 한 생산량 확보</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 4px solid #ffc107; margin-top: 20px;">
-                    <h4 style="color: #856404; margin-bottom: 15px;">🌍 글로벌 트렌드 분석</h4>
-                    <p style="color: #856404; margin: 0; line-height: 1.8;">
-                        <strong>중국 → 베트남 → 이집트 이동 중</strong><br>
-                        • 중국 인건비 상승으로 베트남 진출 증가<br>
-                        • 트럼프 관세 정책으로 베트남에서 이집트로 재이동<br>
-                        • 이집트는 중국 대비 가격경쟁력과 유럽 접근성 우수<br>
-                        • 무관세 혜택으로 유럽, 중동, 아프리카 동시 공략 가능
+                    <p style="margin: 0; color: #333; font-weight: 500; line-height: 1.6;">
+                        이집트의 산업계 부품생산능력을 고려하여 <strong>단계적으로 현지화를 진행</strong>하는 체계적 접근
                     </p>
                 </div>
+
+                <div style="display: grid; gap: 15px;">
+                    <div style="background: #fff; border: 2px solid #e8f2ff; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #4285f4 0%, #667eea 100%);"></div>
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <span style="background: #4285f4; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px;">1</span>
+                            <h4 style="color: #4285f4; margin: 0; font-size: 1.1em;">현지여건 파악 및 조립생산 교육</h4>
+                        </div>
+                        <p style="margin: 0; color: #555; margin-left: 47px; line-height: 1.5;">이집트 현지여건 파악 및 조립생산을 위한 기술교육 실시</p>
+                    </div>
+
+                    <div style="background: #fff; border: 2px solid #e8f2ff; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #667eea 0%, #4285f4 100%);"></div>
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <span style="background: #667eea; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px;">2</span>
+                            <h4 style="color: #667eea; margin: 0; font-size: 1.1em;">한국 부품 조립생산 (Made in Egypt)</h4>
+                        </div>
+                        <p style="margin: 0; color: #555; margin-left: 47px; line-height: 1.5;">한국에서 공급된 부품의 조립생산 (이집트 현지에서 포장만 해도 Made in Egypt)</p>
+                    </div>
+
+                    <div style="background: #fff; border: 2px solid #e8f2ff; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);"></div>
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <span style="background: #8b5cf6; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px;">3</span>
+                            <h4 style="color: #8b5cf6; margin: 0; font-size: 1.1em;">SKD 부품생산조립</h4>
+                        </div>
+                        <p style="margin: 0; color: #555; margin-left: 47px; line-height: 1.5;">Semi Knocked Down - 반조립 부품의 현지 생산 및 조립</p>
+                    </div>
+
+                    <div style="background: #fff; border: 2px solid #e8f2ff; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #764ba2 0%, #9333ea 100%);"></div>
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <span style="background: #764ba2; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px;">4</span>
+                            <h4 style="color: #764ba2; margin: 0; font-size: 1.1em;">CKD 부품생산조립</h4>
+                        </div>
+                        <p style="margin: 0; color: #555; margin-left: 47px; line-height: 1.5;">Complete Knocked Down - 완전분해 부품의 현지 생산 및 조립</p>
+                    </div>
+
+                    <div style="background: #fff; border: 2px solid #e8f2ff; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #16a34a 0%, #15803d 100%);"></div>
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <span style="background: #16a34a; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px;">5</span>
+                            <h4 style="color: #16a34a; margin: 0; font-size: 1.1em;">완전 현지화 생산</h4>
+                        </div>
+                        <p style="margin: 0; color: #555; margin-left: 47px; line-height: 1.5;">100% 이집트 현지에서 부품생산부터 최종조립까지 완전 현지화</p>
+                    </div>
+                </div>
+
+                <!-- 판매 전략 섹션 -->
+                <div class="global-sales-strategy">
+                    <h3>
+                        <span style="font-size: 1.5em; margin-right: 10px;">🌍</span>
+                        글로벌 판매 전략
+                    </h3>
+                    <div class="sales-intro">
+                        <p>최초 조립/생산된 제품의 판매 전략</p>
+                        <div class="sales-cards">
+                            <div class="sales-card">
+                                <h4>🎯 우선 수출</h4>
+                                <p>아프리카, 중동, 유럽 105개국과의 무관세 협정을 활용하여 주변국가 우선 공급</p>
+                            </div>
+                            <div class="sales-card">
+                                <h4>🏠 내수 공급</h4>
+                                <p>이집트 내수시장 안정적 공급으로 기반 구축</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="samsung-case">
+                        <h4>
+                            <span style="margin-right: 8px;">📺</span>
+                            삼성전자 성공사례
+                        </h4>
+                        <p>
+                            <strong>TV 생산품의 15%는 이집트시장 판매, 85%는 주변국가 수출</strong>
+                        </p>
+                        <div class="case-details">
+                            • 무관세 혜택을 활용한 글로벌 수출 허브 구축<br>
+                            • 안정적 내수시장을 기반으로 한 생산량 확보
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 4px solid #ffc107; margin-top: 20px;">
+                <h4 style="color: #856404; margin-bottom: 15px;">🌍 글로벌 트렌드 분석</h4>
+                <p style="color: #856404; margin: 0; line-height: 1.8;">
+                    <strong>중국 → 베트남 → 이집트 이동 중</strong><br>
+                    • 중국 인건비 상승으로 베트남 진출 증가<br>
+                    • 트럼프 관세 정책으로 베트남에서 이집트로 재이동<br>
+                    • 이집트는 중국 대비 가격경쟁력과 유럽 접근성 우수<br>
+                    • 무관세 혜택으로 유럽, 중동, 아프리카 동시 공략 가능
+                </p>
             </div>
         </div>
 
@@ -1060,6 +1123,7 @@ ${message}
         document.addEventListener('DOMContentLoaded', function() {
             
             // 폼 유효성
+
 
 
 
